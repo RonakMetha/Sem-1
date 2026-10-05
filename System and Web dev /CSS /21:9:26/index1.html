@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flexbox Boxes</title>
+ 
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+ 
+   
+    
+    .demo {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      height: 100%;
+      width: 100%;
+    }
+ 
+    /* Both groups stack their children vertically */
+    .left, .right {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      width: 320px;
+    }
+ 
+    
+    .red    { background: brown; }
+    .dred   { background: #a82018; }
+    .green  { background: #7cc61a; }
+    .teal   { background: #3dbfb0; }
+    .pink   { background: #e6b8c4; }
+    .beige  { background: #e8d3a2; }
+    .orange { background: #e0a71c; }
+ 
+    
+    .left .top { height: 46px; }
+ 
+    .left .row {
+      display: flex;
+      gap: 8px;
+      height: 165px;
+    }
+ 
+    .left .col {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+ 
+    .left .green { flex: 3; }
+    .left .pink  { flex: 1.2; }
+    .left .row > .teal { flex: 1.1; }
+ 
+    /* ---------- RIGHT GROUP ---------- */
+    .right .cols {
+      display: flex;
+      gap: 8px;
+    }
+ 
+    .right .c {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+ 
+    .right .c1 .beige  { height: 46px; }
+    .right .c1 .teal   { height: 28px; }
+    .right .c1 .orange { height: 46px; }
+ 
+    .right .c2 .teal   { height: 55px; }
+    .right .c2 .orange { height: 42px; }
+    .right .c2 .beige  { height: 32px; }
+ 
+    .right .bottom { height: 62px; }
+  </style>
+</head>
+ 
+<body>
+ 
+  <div class="demo">
+ 
+    <!-- LEFT GROUP -->
+    <div class="left">
+      <div class="top red"></div>
+      <div class="row">
+        <div class="col">
+          <div class="green"></div>
+          <div class="pink"></div>
+        </div>
+        <div class="teal"></div>
+      </div>
+    </div>
+ 
+    <!-- RIGHT GROUP -->
+    <div class="right">
+      <div class="cols">
+        <div class="c c1">
+          <div class="beige"></div>
+          <div class="teal"></div>
+          <div class="orange"></div>
+        </div>
+        <div class="c c2">
+          <div class="teal"></div>
+          <div class="orange"></div>
+          <div class="beige"></div>
+        </div>
+      </div>
+      <div class="bottom dred"></div>
+    </div>
+ 
+  </div>
+ 
+</body>
+</html>

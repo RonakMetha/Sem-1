@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            perspective: 900px;
+        }
+        #main{
+            height: 600px;
+            width: 300px;
+            position: relative;
+            margin: 51px auto;
+            transform-style: preserve-3d;
+            transition: 2s;
+            
+        }
+        #main:hover{
+            transform: rotateY(180deg);       
+        }
+
+        #one{
+            background-color: blue;
+            height: 50%;
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+            backface-visibility: hidden;
+
+           
+        }
+         #two{
+            background-color: red;
+            height: 50%;
+            width: 100%;
+            transform: rotateY(180deg); 
+            
+        }
+        div{
+            color:snow;
+        }
+        img{
+            height: 100%;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="one">
+            <img src="https://images.unsplash.com/photo-1789486525408-f44a33209185?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDZ8dG93SlpGc2twR2d8fGVufDB8fHx8fA%3D%3D" alt="">
+        </div>
+        <div id="two">
+            <img src="https://images.unsplash.com/photo-1790067745137-4cc11c3c3349?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyNnx8fGVufDB8fHx8fA%3D%3D" alt="">
+        </div>
+    </div>
+    
+</body>
+</html>
